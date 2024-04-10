@@ -1,7 +1,7 @@
-const express = require('express');
-const calculatorController = require('../controllers/calculatorController.js');
+import { Router } from 'express';
+import calculatorController from '../controllers/calculatorController.js';
 
-const router = express.Router();
+const router = Router();
 
 router.post('/sum', calculatorController.sum);
 router.post('/subtraction', calculatorController.subtraction);
@@ -9,4 +9,4 @@ router.post('/multiply', calculatorController.multiply);
 router.post('/division', calculatorController.division);
 
 
-module.exports = router;
+export default router;

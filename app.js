@@ -1,9 +1,9 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const calculatorRoutes = require('./routes/calculatorRoutes.js');
+import express from 'express';
+import bodyParser from 'body-parser';
+import calculatorRoutes from './routes/calculatorRoutes.js';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use('/api', calculatorRoutes);
